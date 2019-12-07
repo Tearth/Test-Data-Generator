@@ -15,7 +15,7 @@ namespace TestDataGenerator
 
         public IEnumerable<Set> Generate(Options options)
         {
-            for (var i = 0; i < options.TestSetsCount; i++)
+            for (var i = 1; i <= options.TestSetsCount; i++)
             {
                 var set = new Set
                 {
@@ -31,7 +31,7 @@ namespace TestDataGenerator
 
         private IEnumerable<Task> CreateListOfTasks(int count, int processorsCount, int minTaskTime, int maxTaskTime)
         {
-            for (var i = 0; i < count; i++)
+            for (var i = 1; i <= count; i++)
             {
                 yield return new Task
                 {

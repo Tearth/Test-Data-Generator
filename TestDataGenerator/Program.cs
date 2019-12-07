@@ -10,6 +10,7 @@ namespace TestDataGenerator
         {
             var options = default(Options);
             var generator = new Generator();
+            var exporter = new Exporter();
 
             Console.WriteLine("Test Data Generator");
             Console.WriteLine("===================");
@@ -34,6 +35,11 @@ namespace TestDataGenerator
             Console.WriteLine();
 
             var generatedSets = generator.Generate(options);
+            if (!exporter.Save(options.OutputPath, generatedSets))
+            {
+                Console.WriteLine("Output directory not found!");
+            }
+
             Console.Read();
         }
     }
