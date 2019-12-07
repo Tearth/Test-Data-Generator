@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using CommandLine;
 using TestDataGenerator.Models;
 
@@ -34,12 +35,14 @@ namespace TestDataGenerator
             Console.WriteLine("===================");
             Console.WriteLine();
 
-            var generatedSets = generator.Generate(options);
+            var generatedSets = generator.Generate(options).ToList();
             if (!exporter.Save(options.OutputPath, generatedSets))
             {
                 Console.WriteLine("Output directory not found!");
+                return;
             }
 
+            Console.WriteLine($"Done! {generatedSets.Count} sets generated");
             Console.Read();
         }
     }
