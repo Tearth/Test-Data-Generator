@@ -1,6 +1,6 @@
 ﻿using CommandLine;
 
-namespace TestDataGenerator
+namespace TestDataGenerator.Models
 {
     public class Options
     {
