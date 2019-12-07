@@ -1,5 +1,5 @@
 # TestDataGenerator
-Simple program which generates test sets for the another project. Format of the generated file is as follows:
+Simple program which generates test sets for the another project. Format of the generated files is as follows:
 
 ```
 <tasks count>
@@ -10,7 +10,7 @@ Simple program which generates test sets for the another project. Format of the 
 ```
 
 ## Example usage
-List all available arguments: `TestDataGenerator`
+List all available arguments: `TestDataGenerator -help`
 
 Generate sets: `TestDataGenerator -count 50 -min-cpu 10 -max-cpu 20`
 
