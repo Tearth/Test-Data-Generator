@@ -4,7 +4,7 @@ namespace TestDataGenerator.Models
 {
     public class Options
     {
-        [Option("output", HelpText = "Set directory where output files will be saved.", Required = false, Default = "./output")]
+        [Option("output", HelpText = "Set directory where the output files will be saved.", Required = false, Default = "./")]
         public string OutputPath { get; set; }
 
         [Option("count", HelpText = "Set number of the sets which will be generated.", Required = false, Default = 10)]

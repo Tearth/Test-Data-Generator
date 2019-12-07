@@ -29,21 +29,20 @@ namespace TestDataGenerator
                 Console.WriteLine($"Maximum processors count: {o.MaxProcessorsCount}");
                 Console.WriteLine($"Minimum task time: {o.MinTaskTime}");
                 Console.WriteLine($"Maximum task time: {o.MaxTaskTime}");
+
+                Console.WriteLine();
+                Console.WriteLine("===================");
+                Console.WriteLine();
+
+                var generatedSets = generator.Generate(options).ToList();
+                if (!exporter.Save(options.OutputPath, generatedSets))
+                {
+                    Console.WriteLine("Output directory not found!");
+                    return;
+                }
+
+                Console.WriteLine($"Done! {generatedSets.Count} sets generated");
             });
-
-            Console.WriteLine();
-            Console.WriteLine("===================");
-            Console.WriteLine();
-
-            var generatedSets = generator.Generate(options).ToList();
-            if (!exporter.Save(options.OutputPath, generatedSets))
-            {
-                Console.WriteLine("Output directory not found!");
-                return;
-            }
-
-            Console.WriteLine($"Done! {generatedSets.Count} sets generated");
-            Console.Read();
         }
     }
 }

@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "TestDataGenerator": {
+      "commandName": "Project"
+    }
+  }
+}
