@@ -1,4 +1,4 @@
-# TestDataGenerator
+# Test Data Generator
 Simple program which generates test sets for the another project. Format of the generated files is as follows:
 
 ```
